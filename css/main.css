@@ -1,0 +1,44 @@
+:root {
+    --theme-color: white;
+    --primary-color: rgb(146, 146, 146);
+    --secundary-color: black;
+    --text-color-inverse: rgb(255, 255, 255);
+    --text-color: black;
+    --navbar-shallow-color: rgb(146, 145, 145);
+    --menu-mobile-background-color: rgb(39, 39, 39);
+
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--theme-color);
+    color:var(--text-color);
+    padding-top: 70px;
+}
+
+a {
+    text-decoration: none;
+    color:var(--text-color)
+}
+
+.horizontal-padding{
+    padding-left: 25px;
+    padding-right: 25px;
+} 
+
+.vertical-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+@media (min-width: 950px) {
+    .horizontal-padding{
+        padding-left: 70px;
+        padding-right: 70px;
+    } 
+    
+    .vertical-padding {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
