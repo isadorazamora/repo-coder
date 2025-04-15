@@ -46,6 +46,24 @@
 filter: brightness(130%);
 }
 
+
+
+.btn btn-primary mi-boton{
+    background-color: #e75480;
+    border-color: #e75480;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn btn-primary mi-boton{
+    background-color: #d43f6e;
+    border-color: #d43f6e;
+  }
+
 @media (min-width: 950px) {
     .sobremi-info {
         margin-bottom: 0px;

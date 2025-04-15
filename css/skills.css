@@ -1,3 +1,4 @@
+/* duda con css y bootstrap
 .skills{
     max-width: 980px;
     margin: 0 auto;
@@ -26,6 +27,16 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+*/
+
+.habilidades-lista .list-group-item {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #333;
+    background-color: transparent;
+    border: none;
+  }
 
 @media(min-width: 950px) {
     .skills-title{

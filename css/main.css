@@ -31,6 +31,41 @@ a {
     padding-bottom: 25px;
 }
 
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+/* dudas con css y bootstrap
+
+.mi-boton {
+    background-color: #e75480;
+    border-color: #e75480;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mi-boton:hover {
+    background-color: #d43f6e;
+    border-color: #d43f6e;
+  }
+
+  */
+
 @media (min-width: 950px) {
     .horizontal-padding{
         padding-left: 70px;
