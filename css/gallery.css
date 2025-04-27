@@ -1,0 +1,25 @@
+/* Estilos para la galería de fotos */
+.gallery {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .photo-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .expanded {
+    transform: scale(1.5); /* Hace que la imagen se agrande */
+  }
