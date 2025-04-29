@@ -191,8 +191,7 @@ a {
     }
   }
 
-  
-  /* íconos de awesome*/
+   /* íconos de awesome*/
 
   .tools-container {
     text-align: center;
@@ -325,14 +324,8 @@ a {
     font-size: 1rem;
   }
 }
-
-  
-  
-  
  
-  
-  
-
+/* nose que es esto*/
 @media (min-width: 950px) {
     .horizontal-padding{
         padding-left: 70px;
@@ -345,3 +338,49 @@ a {
     }
     
 }
+
+/* logo y menú de navegación */
+
+/* Estilo para la barra de navegación */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+.open-menu {
+  display: none; /* Ocultamos el menú en pantallas grandes */
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .open-menu {
+    display: block;
+  }
+
+  .open-menu.active + .menu {
+    display: flex;
+  }
+}
+
