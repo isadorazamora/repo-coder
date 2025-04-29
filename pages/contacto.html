@@ -53,23 +53,40 @@
     
     <!--Main-->
 
-    <div class="horizontal-padding vertical-padding">
-        <h1>Contactos</h1>
-        <section class="rrss">
-            <h1>Redes Sociales</h1>
-            <li><a href="">Linkedn</a></li>
-            <li><a href="">Behance</a></li>
-            <li><a href="">Instagram</a></li>
-
-        </section>
-
-        <section class="contact">
-            <h1>Contacto</h1>
-            <li><a href=""> isadora.zamora.f@mail.pucv.cl</a></li>
-            <li><a href="">+56999988889</a></li>
-        </section>
-
-    </div>
+    <main class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 animate-fade-in">
+          <h2 class="text-center mb-4">Contáctame</h2>
+          <form id="contactoForm" class="p-4 shadow rounded bg-white">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-send-fill me-2"></i>Enviar
+              </button>
+            </div>
+          </form>
+    
+          <div class="text-center mt-4 contacto-info animate-fade-in-delayed">
+            <p><i class="bi bi-envelope-fill me-2"></i><strong>Email:</strong> isadora.zamora.f@mail.cl</p>
+            <p><i class="bi bi-instagram me-2"></i><strong>Instagram:</strong> <a href="https://www.instagram.com/is.antu/" target="_blank">@is.antu</a></p>
+            <p><i class="bi bi-linkedin me-2"></i><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/isadora-zamora-figueroa-75700a2b7/" target="_blank">linkedin Isadora Zamora F</a></p>
+            <p><i class="bi bi-github me-2"></i><strong>GitHub:</strong> <a href="https://github.com/isadorazamora" target="_blank">github.com/isadorazamora</a></p>
+          </div>
+        </div>
+      </div>
+    </main>
+    
 
     <!---Footer-->
     <footer>

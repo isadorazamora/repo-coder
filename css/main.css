@@ -47,27 +47,291 @@ a {
   }
 
 
+
+  /* Estilo de los botones de categorías */
+.botones-categorias {
+    text-align: center;
+    margin-bottom: 30px;
+  }
   
-
-/* dudas con css y bootstrap
-
-.mi-boton {
-    background-color: #e75480;
-    border-color: #e75480;
-    color: white;
-    border-radius: 30px;
+  .botones-categorias button {
     padding: 12px 30px;
+    margin: 0 15px;
+    background-color: #007bff; /* Azul de tu estilo */
+    color: white;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    font-family: 'Roboto', sans-serif; /* Tipografía personalizada */
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .botones-categorias button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Aumento de tamaño al pasar el mouse */
+  }
+  
+  /* Estilos del contenedor de la galería */
+  .galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  /* Estilos para cada proyecto de la galería */
+  .categoria-proyecto {
+    display: none; /* Inicialmente oculto */
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f9f9f9; /* Fondo claro para los proyectos */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0.9; /* Opacidad ligeramente reducida */
+    cursor: pointer;
+  }
+  
+  .categoria-proyecto:hover {
+    transform: scale(1.05); /* Efecto de agrandar al pasar el ratón */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    opacity: 1; /* Restaurar opacidad al pasar el ratón */
+  }
+  
+  
+  
+  /* Estilos para el fondo general de la página */
+  body {
+    background-color: #f4f7fb; /* Fondo claro */
+    color: #333; /* Color de texto general */
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Contenedor general */
+  main {
+    padding: 40px 10%;
+    text-align: center;
+  }
+  
+  /* Espaciado y márgenes para el título */
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff; /* Azul de tu paleta */
+    margin-bottom: 40px;
+  }
+  
+  /* Estilos del footer */
+  footer {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* carrousel*/
+
+  .project-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .carousel-inner img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-description {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-description h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .project-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #007bff; /* Azul para los controles */
+    border-radius: 50%;
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .project-description h2 {
+      font-size: 20px;
+    }
+  
+    .project-description p {
+      font-size: 14px;
+    }
+  }
+
+  
+  /* íconos de awesome*/
+
+  .tools-container {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px; /* Espacio debajo de los íconos */
+  }
+  
+  .tools-container h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .tools-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .tools-icons i {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .tools-icons i:hover {
+    transform: scale(1.2); /* Aumenta el tamaño cuando el usuario pasa el mouse */
+  }
+
+  /* boton volver a proyectos */
+  .btn-volver {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1.2rem;
+    background-color: transparent;
+    color: #005ea8; /* Usa aquí tu color principal */
+    border: 2px solid #005ea8;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'TuFuente', sans-serif; /* Cámbialo por tu fuente */
+    transition: all 0.3s ease;
+  }
+  
+  .btn-volver:hover {
+    background-color: #005ea8;
+    color: #fff;
+  }
+
+  /*  cards para proyectos */
+
+  .seccion-categorias {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .contenedor-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .card-proyecto {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-proyecto:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-proyecto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+  }
+  
+  .card-proyecto p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-ver {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #005ea8;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s ease;
   }
   
-  .mi-boton:hover {
-    background-color: #d43f6e;
-    border-color: #d43f6e;
+  .btn-ver:hover {
+    background-color: #004b87;
   }
 
-  */
+  
+  /* nueva plantilla para todo index*/
+
+  /* Estilo para las habilidades */
+.habilidad-item {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 15px 30px;
+  text-align: center;
+  border-radius: 30px; /* Bordes redondeados */
+  font-size: 1.1rem;
+  color: #343a40;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la fila horizontal */
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+  .habilidad-item {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+  
+  
+  
+ 
+  
+  
 
 @media (min-width: 950px) {
     .horizontal-padding{
