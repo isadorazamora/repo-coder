@@ -1,0 +1,21 @@
+@use 'abstracts' as *;
+@use 'components/header';
+@use 'components/footer';
+@use 'components/proyectos';
+
+// Ahora sí podés escribir reglas CSS
+
+$color-fondo: #ff5733;
+
+form#contactoForm {
+  background-color: $color-fondo;
+}
+
+$color-boton: #ff5733;
+
+// Cambiar el color del botón
+button[type="submit"] {
+  background-color: $color-boton;
+  color: red;
+  border: none;
+}

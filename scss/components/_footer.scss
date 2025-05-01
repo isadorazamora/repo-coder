@@ -1,0 +1,14 @@
+// _footer.scss
+@use '../abstracts' as *;  // Importa las variables de abstracts
+
+.footer {
+  background-color: $color-secundario;  // Usa la variable $color-secundario (que puedes definir en _variables.scss)
+  padding: 20px;
+  text-align: center;
+  color: white;
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
