@@ -3,20 +3,22 @@
 @use 'components/footer';
 @use 'components/proyectos';
 
-// Ahora sí podés escribir reglas CSS
+// ahora si escribir reglas
 
-$color-fondo: #ff5733;
+$color-boton: #571862;
+$color-secundario: #8D99AE;
+$color-principal: #343432;
 
 form#contactoForm {
-  background-color: $color-fondo;
+  background-color: $color-boton;
 }
 
-$color-boton: #ff5733;
+$color-boton: $color-boton;
 
 // Cambiar el color del botón
 button[type="submit"] {
   background-color: $color-boton;
-  color: red;
+  color: white;
   border: none;
 }
 

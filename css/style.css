@@ -1,5 +1,5 @@
 .header {
-  background-color: #ff5733;
+  background-color: #343432;
   padding: 20px;
   text-align: center;
   color: rgb(146, 26, 116);
@@ -13,41 +13,36 @@
 }
 
 .footer {
-  background-color: #3498db;
+  background-color: #8D99AE;
   padding: 20px;
   text-align: center;
-  color: white;
-}
-.footer p {
-  font-size: 1rem;
-  margin: 0;
 }
 
-.proyectos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+li {
+  color: #8D99AE;
 }
-.proyectos .proyecto {
-  background-color: #333;
-  padding: 20px;
-  border-radius: 8px;
+
+.contacto {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
 }
-.proyectos .proyecto h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+
+.btn-ver {
+  color: white;
+  background-color: #571862;
 }
-.proyectos .proyecto p {
-  font-size: 1rem;
-  color: #3498db;
+
+h1 {
+  color: #343432;
 }
 
 form#contactoForm {
-  background-color: #ff5733;
+  background-color: #571862;
 }
 
 button[type=submit] {
-  background-color: #ff5733;
-  color: red;
+  background-color: #571862;
+  color: white;
   border: none;
 }

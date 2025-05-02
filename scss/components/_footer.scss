@@ -1,14 +1,23 @@
-// _footer.scss
+
 @use '../abstracts' as *;  // Importa las variables de abstracts
 
+$color-boton: #571862;
+$color-secundario: #8D99AE;
+$color-principal: #343432;
+
 .footer {
-  background-color: $color-secundario;  // Usa la variable $color-secundario (que puedes definir en _variables.scss)
+  background-color: $color-secundario;  
   padding: 20px;
   text-align: center;
-  color: white;
 
-  p {
-    font-size: 1rem;
-    margin: 0;
-  }
+}
+
+li{
+  color: $color-secundario;
+}
+
+.contacto {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
 }

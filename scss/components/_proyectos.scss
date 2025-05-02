@@ -1,25 +1,17 @@
 // _proyectos.scss
 @use '../abstracts' as *;  // Importa las variables de abstracts
 
-.proyectos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  
-  .proyecto {
-    background-color: $color-texto;  // Usa la variable $color-texto
-    padding: 20px;
-    border-radius: 8px;
-    
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      ;
-    }
 
-    p {
-      font-size: 1rem;
-      color: $color-secundario;  // Usa la variable $color-secundario
-    }
-  }
+$color-boton: #571862;
+$color-secundario: #8D99AE;
+$color-principal: #343432;
+
+
+.btn-ver {
+color: white;
+background-color: $color-boton;
+}
+
+h1{
+    color: $color-principal;
 }
