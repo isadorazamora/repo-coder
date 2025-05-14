@@ -2,226 +2,256 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-  
-    <!-- Tipografía Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-    <!-- Bootstrap Icons CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  
-    <!-- Tus archivos de estilos personalizados -->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/sobremi.css">
-    <link rel="stylesheet" href="../css/skills.css">
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio</title>
 
-    <!-- Agregar Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-     
-  </head>
+  <!-- Tipografía Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Tus archivos de estilos personalizados -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/sobremi.css">
+  <link rel="stylesheet" href="../css/skills.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Agregar Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+</head>
 
 <body>
+    <!-- scrip bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
-         <!---header-->
-         <header class="topheader">
-          <nav class="topnav" role="navigation">
-            <a href="/index.html" class="logo">
-              <img src="/img/logoiz.png" alt="Logo Izadora Zamora" width="50">
-            </a>
-            
-            <!-- Botón para abrir menú -->
-            <button class="open-menu" aria-label="Abrir menú" type="button">
-              <i class="bi bi-list"></i>
-            </button>
-        
-            <!-- Menú de navegación -->
-            <ul class="menu">
-              <!-- Botón para cerrar menú -->
-              <li>
-                <button class="close-menu" aria-label="Cerrar menú" type="button">
-                  <i class="bi bi-x-lg"></i>
-                </button>
-              </li>
-              <li><a href="/index.html">Sobre mí</a></li>
-              <li><a href="proyectos.html" class="selected">Proyectos</a></li>
-              <li><a href="contacto.html" >Contacto</a></li>
-            </ul>
-          </nav>
-        </header>
-    
-    
-    <!--Main-->
+  <!---header-->
+  <header class="topheader">
+    <nav class="topnav" role="navigation">
+      <a href="../index.html" class="logo">
+        <img src="../img/logoiz.png" alt="Logo Isadora Zamora" width="50">
+      </a>
 
-    <div class="horizontal-padding vertical-padding">
-        <h1>Proyecto páginas web</h1>
-    </div>
-      <!-- botón hacia atrás--> 
+      <!-- Botón para abrir el menú -->
+      <button class="open-menu" id="open-menu" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <!-- Menú de navegación -->
+      <ul class="menu" id="menu">
+        <!-- Botón para cerrar el menú -->
+        <button class="close-menu" id="close-menu" aria-label="Cerrar menú">
+          ×
+        </button>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!--Main-->
+
+  <!-- botón hacia atrás-->
   <a href="proyectos.html" class="btn-volver">
     ← Volver a Proyectos
   </a>
 
-    <!-- Sección de proyectos -->
-<section class="container mt-5">
-  <h2>Proyectos de interacción de objetos</h2>
-  <div class="project-container">
-    <!-- Carrusel de imágenes -->
-     <h1>Proyecto 1</h1>
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/img/fotoperfil.png" class="d-block w-100" alt="Proyecto 1">
+  <!-- Sección de proyectos -->
+  <section class="container mt-5">
+    <h2>Proyectos de interacción de objetos</h2>
+    <div class="project-container">
+      <!-- Carrusel de imágenes -->
+      <h1>Brief para emprendimiento</h1>
+      <div id="carrusel3.1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+        data-bs-pause="hover">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/talleralmendra1.png" class="d-block w-100" alt="Logo taller Almendra">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/talleralmendra2.png" class="d-block w-100" alt="Brief de marca Taller Almendra">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/talleralmendra3.png" class="d-block w-100" alt="Accesorios Taller Almendra">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/talleralmendra4.png" class="d-block w-100" alt="Mockups Taller Almendra">
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="/img/logoiz.png" class="d-block w-100" alt="Proyecto 2">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/fotoperfil.png" class="d-block w-100" alt="Proyecto 3">
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="carrusel3.1" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="carrusel3.1" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  
-    <!-- Descripción del Proyecto -->
-    <div class="project-description">
-      <h2>Proyecto: [Nombre del Proyecto]</h2>
-      <p>Este proyecto fue creado con el propósito de [breve descripción de lo que lograste con el proyecto]. Aquí utilizamos las mejores prácticas de diseño UX/UI y lo implementamos con tecnologías como [menciona las tecnologías que usaste].</p>
-      <p>El objetivo principal de este trabajo fue [explicar un poco más sobre los objetivos del proyecto].</p>
-    </div>
-  </div>
 
-  <div class="tools-container">
-    <h3>Herramientas utilizadas:</h3>
-    <div class="tools-icons">
-      <!-- Íconos de herramientas -->
-      <i class="fab fa-figma" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Figma -->
-      <i class="fa fa-pen-square" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Illustrator -->
-      <i class="fa fa-pen" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Photoshop -->
-      <i class="fab fa-github" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de GitHub -->
-      <i class="fab fa-git-alt" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Visual Studio -->
-    </div>
-  </div>
-
-  <div class="project-container">
-    <!-- Carrusel de imágenes -->
-     <h1>Proyecto 2</h1>
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/img/fotoperfil.png" class="d-block w-100" alt="Proyecto 1">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/logoiz.png" class="d-block w-100" alt="Proyecto 2">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/fotoperfil.png" class="d-block w-100" alt="Proyecto 3">
-        </div>
+      <!-- Descripción del Proyecto -->
+      <div class="project-description">
+        <h2>Taller Almendra</h2>
+        <p>Para este emprendimiento de muñecas hechas a mano, se desarrolló una nueva identidad visual que refleja el
+          carácter artesanal, divertido, cálido y cercano de la marca. Se diseñó un logo original que transmite la
+          esencia divertida y delicada del proyecto, acompañado de una paleta de colores entretenida que evocan lo hecho
+          a mano y lo auténtico.
+          Además, se presentaron mockups que visualizan cómo se aplicaría esta identidad en elementos físicos como
+          timbres y papelería, reforzando la coherencia gráfica de la marca en cada punto de contacto. </p>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  
-    <!-- Descripción del Proyecto -->
-    <div class="project-description">
-      <h2>Proyecto: [Nombre del Proyecto]</h2>
-      <p>Este proyecto fue creado con el propósito de [breve descripción de lo que lograste con el proyecto]. Aquí utilizamos las mejores prácticas de diseño UX/UI y lo implementamos con tecnologías como [menciona las tecnologías que usaste].</p>
-      <p>El objetivo principal de este trabajo fue [explicar un poco más sobre los objetivos del proyecto].</p>
-    </div>
-  </div>
 
-  <div class="tools-container">
-    <h3>Herramientas utilizadas:</h3>
-    <div class="tools-icons">
-      <!-- Íconos de herramientas -->
-      <i class="fab fa-figma" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Figma -->
-      <i class="fa fa-pen-square" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Illustrator -->
-      <i class="fa fa-pen" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Photoshop -->
-      <i class="fab fa-github" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de GitHub -->
-      <i class="fab fa-git-alt" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Visual Studio -->
-    </div>
-  </div>
-
-  <div class="project-container">
-    <!-- Carrusel de imágenes -->
-     <h1>Proyecto 3</h1>
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/img/fotoperfil.png" class="d-block w-100" alt="Proyecto 1">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/logoiz.png" class="d-block w-100" alt="Proyecto 2">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/fotoperfil.png" class="d-block w-100" alt="Proyecto 3">
-        </div>
+    <div class="tools-container">
+      <h3>Herramientas utilizadas:</h3>
+      <div class="tools-icons">
+        <!-- Íconos de herramientas -->
+        <span class="fa-stack" style="font-size: 30px;">
+          <i class="fas fa-file fa-stack-2x" style="color: #353535;"></i>
+          <strong class="fa-stack-1x" style="color: #ff9a00; font-size: 14px;">Ai</strong>
+        </span>
+        <span class="fa-stack" style="font-size: 30px;">
+          <i class="fas fa-file fa-stack-2x" style="color: #353535;"></i>
+          <strong class="fa-stack-1x" style="color: #ff3366; font-size: 14px;">Id</strong>
+        </span>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  
-    <!-- Descripción del Proyecto -->
-    <div class="project-description">
-      <h2>Proyecto: [Nombre del Proyecto]</h2>
-      <p>Este proyecto fue creado con el propósito de [breve descripción de lo que lograste con el proyecto]. Aquí utilizamos las mejores prácticas de diseño UX/UI y lo implementamos con tecnologías como [menciona las tecnologías que usaste].</p>
-      <p>El objetivo principal de este trabajo fue [explicar un poco más sobre los objetivos del proyecto].</p>
+
+    <div class="project-container">
+      <!-- Carrusel de imágenes -->
+      <h1>Artefacto refrigerante portable</h1>
+      <div id="carrusel3.2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"
+        data-bs-pause="hover">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/frisa1.png" class="d-block w-100" alt="Observaciones en Residencias de adulto mayor">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/frisa2.png" class="d-block w-100" alt="Prototipos de Frisa">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/frisa3.png" class="d-block w-100" alt="Artefacto Frisa">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="carrusel3.2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="carrusel3.2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Descripción del Proyecto -->
+      <div class="project-description">
+        <h2>Frisa</h2>
+        <p>Frisa es un artefacto refrigerante portátil diseñado para brindar alivio térmico a personas de la tercera
+          edad que viven en condiciones socioeconómicas vulnerables. Su diseño ergonómico y de bajo consumo busca
+          mejorar la calidad de vida durante periodos de altas temperaturas, promoviendo el bienestar, la seguridad y el
+          autocuidado en el entorno doméstico. Frisa es una solución accesible, pensada desde la empatía, la
+          funcionalidad y la sostenibilidad.</p>
+      </div>
     </div>
-  </div>
 
-  <div class="tools-container">
-    <h3>Herramientas utilizadas:</h3>
-    <div class="tools-icons">
-      <!-- Íconos de herramientas -->
-      <i class="fab fa-figma" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Figma -->
-      <i class="fa fa-pen-square" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Illustrator -->
-      <i class="fa fa-pen" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Photoshop -->
-      <i class="fab fa-github" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de GitHub -->
-      <i class="fab fa-git-alt" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Visual Studio -->
+    <div class="tools-container">
+      <h3>Herramientas utilizadas:</h3>
+      <div class="tools-icons">
+        <!-- Íconos de herramientas -->
+        <span class="fa-stack" style="font-size: 30px;">
+          <i class="fas fa-file fa-stack-2x" style="color: #353535;"></i>
+          <strong class="fa-stack-1x" style="color: #ff9a00; font-size: 14px;">Ai</strong>
+        </span>
+      </div>
     </div>
-  </div>
-  
-</section>
+
+    <div class="project-container">
+      <!-- Carrusel de imágenes -->
+      <h1>Interacción lumínica envolvente</h1>
+      <div id="carrusel3.3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
+        data-bs-pause="hover">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/lampara1.png" class="d-block w-100" alt="registro lampara">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/lampara2.png" class="d-block w-100" alt="registro lampara">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/lampara3.png" class="d-block w-100" alt="registro lampara">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/lampara4.png" class="d-block w-100" alt="registro lampara">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="carrusel3.3" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="carrusel3.3" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Descripción del Proyecto -->
+      <div class="project-description">
+        <h2>Espacio lumínico giratorio</h2>
+        <p>Se diseñó y creó un espacio lumínico interactivo pensado para transformar la atmósfera del hogar según
+          distintas intenciones de reunión y estados emocionales. Este artefacto busca no solo iluminar, sino también
+          generar una experiencia sensorial y simbólica, en la que la luz actúe como un lenguaje que acompaña y moldea
+          los vínculos cotidianos.
+
+          Gracias al uso de tecnología Arduino, el objeto incorpora un sistema de giro motorizado, el cual permite
+          modificar su orientación y comportamiento lumínico. Este movimiento genera dos posibilidades espaciales: una
+          sensación de inmensidad, que invita a la contemplación o al recogimiento personal; y, por otro lado, un
+          encuentro íntimo y cálido, que propicia la cercanía entre quienes habitan el espacio.
+          El resultado es un objeto sensible que, mediante sus variaciones de luz y movimiento, logra adaptarse a las
+          dinámicas afectivas del hogar, aportando no solo funcionalidad, sino también un valor poético y emocional al
+          entorno.</p>
+      </div>
+    </div>
+
+    <div class="tools-container">
+      <h3>Herramientas utilizadas:</h3>
+      <div class="tools-icons">
+        <!-- Íconos de herramientas -->
+        <i class="fa fa-pen-square" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Illustrator -->
+        <i class="fa fa-pen" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Photoshop -->
+        <i class="fab fa-git-alt" style="font-size: 40px; color: #353535;"></i> <!-- Ícono de Visual Studio -->
+      </div>
+    </div>
+
+  </section>
 
 
-    <!---Footer-->
-    <footer class="footer">
-      <nav>
-          <ul>
-              <li><a href="index.html" class="contacto">Sobre mi</a></li>
-              <li><a href="pages/proyectos.html" class="contacto">Proyectos páginas webs</a></li>
-              <li><a href="pages/contacto.html" class="contacto">Contacto</a></li>
-          </ul>
-      </nav>
+  <!---Footer-->
+  <footer class="footer">
+    <nav>
+      <ul>
+        <li><a href="../index.html" class="contacto">Sobre mi</a></li>
+        <li><a href="pages/proyectos.html" class="contacto">Proyectos páginas webs</a></li>
+        <li><a href="pages/contacto.html" class="contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+
 
 </body>
 

@@ -1,36 +1,43 @@
+/* =======================
+   ESTILOS GENERALES NAVBAR
+========================== */
+
 .topheader {
     position: fixed;
-    box-shadow: 0 2px 5px var(--navbar-shallow-color);
-    background-color: var(--theme-color);
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
+    background-color: var(--theme-color);
+    box-shadow: 0 2px 5px var(--navbar-shallow-color);
     z-index: 100;
 }
 
 .topnav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
     margin: 0 auto;
 }
 
-/* logo */
-
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
     font-size: 16px;
     font-weight: 200;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 .logo img {
     border-radius: 50%;
 }
 
-/* menu */
-.menu{
+/* =======================
+   MENÚ DESKTOP
+========================== */
+
+.menu {
     display: flex;
     list-style: none;
     margin: 0;
@@ -41,13 +48,14 @@
     padding: 0 15px;
 }
 
-.menu a{
+.menu a {
     color: var(--text-color);
     font-size: 14px;
     font-weight: 400;
     line-height: 50px;
     text-transform: uppercase;
     position: relative;
+    text-decoration: none;
 }
 
 .menu a::after {
@@ -58,83 +66,99 @@
     top: calc(100% + 4px);
     width: 100%;
     height: 4px;
-
     opacity: 0;
     transition: opacity 0.3s;
-
 }
 
-
 .menu a.selected::after,
-.menu a:hover::after{
+.menu a:hover::after {
     opacity: 0.8;
 }
 
-.menu a.hover{
+.menu a.hover,
+.menu a.selected {
     color: var(--primary-color);
 }
 
-.open-menu,
-.close-menu{display: none;}
-
-@media (max-width: 950px){
-    
-/* menu */
-.menu{
-    flex-direction: column;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    align-items: center;
-    background-color: var(--menu-mobile-background-color);
-   height: 100%;
-   overflow-y: auto;
-
-   opacity: 0;
-   pointer-events: none;
-}
-
-.menu li {
-    padding: 0;
-}
-
-.menu a{
-    color: var( --text-color-inverse);
-    line-height: 70px;
-    font-size: 25px;
-    
-}
+/* =======================
+   BOTONES DE MENÚ
+========================== */
 
 .open-menu,
 .close-menu {
-    display: block;
+    display: none;
     border: none;
     background: none;
     cursor: pointer;
-}
-.close-menu {
-    align-self: flex-end;
-    padding: 20px 15px;
+    font-size: 2rem;
+    color: var(--text-color);
 }
 
-.menu_opened{
-    opacity: 1;
-    pointer-events: all;
-}
+/* =======================
+   MENÚ MOBILE
+========================== */
 
-.open-menu:focus:not(:focus-visible),
-.close-menu:focus:not(:focus-visible) { 
-    outline: none;
-}
+@media (max-width: 950px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--menu-mobile-background-color);
+        overflow-y: auto;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        padding-top: 100px;
+    }
 
-.menu a::after {
-    content: none;
-}
+    .menu.menu_opened {
+        opacity: 1;
+        pointer-events: all;
+    }
 
+    .menu li {
+        padding: 10px 0;
+    }
 
-.menu a.hover
-.menu a.selected{
-    color: var(--secundary-color);
-}
+    .menu a {
+        color: var(--text-color-inverse);
+        font-size: 25px;
+        line-height: 70px;
+    }
+
+    .menu a::after {
+        content: none;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+        position: absolute;
+        z-index: 101;
+    }
+
+    .open-menu {
+        top: 15px;
+        right: 20px;
+    }
+
+    .close-menu {
+        top: 15px;
+        right: 20px;
+    }
+
+    .open-menu:focus:not(:focus-visible),
+    .close-menu:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    .menu a.hover,
+    .menu a.selected {
+        color: var(--secundary-color);
+    }
 }

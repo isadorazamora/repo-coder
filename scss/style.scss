@@ -1,10 +1,18 @@
+// Primero, sobrescribe las variables de Bootstrap (en la parte superior del archivo)
+$btn-primary-bg: #571862; // Color morado para el fondo de los botones primarios
+$btn-primary-border: #571862; // Color morado para el borde de los botones primarios
+$btn-primary-color: white; // Color blanco para el texto de los botones primarios
+
+// Luego, importa Bootstrap y otros componentes (después de las sobrescrituras)
 @use 'abstracts' as *;
 @use 'components/header';
 @use 'components/footer';
 @use 'components/proyectos';
+@use 'components/testimonios';
+@use 'components/sobremi';
+@use 'components/navbar';
 
-// ahora si escribir reglas
-
+// Aquí puedes seguir escribiendo reglas adicionales, por ejemplo, para el formulario de contacto
 $color-boton: #571862;
 $color-secundario: #8D99AE;
 $color-principal: #343432;
@@ -15,11 +23,97 @@ form#contactoForm {
 
 $color-boton: $color-boton;
 
-// Cambiar el color del botón
+// Cambiar el color del botón en el formulario (o de cualquier tipo de botón)
 button[type="submit"] {
   background-color: $color-boton;
   color: white;
   border: none;
 }
 
-// Cambié algo para hacer el commit de "sass configurado"
+// Reglas para los testimonios y otros componentes
+.testimonios blockquote {
+  font-style: italic;
+  color: #333; // Color del texto
+}
+
+.testimonios cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555; // Color de la cita
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+// Botón normal
+button,
+.btn {
+  background-color: #571862; // Color morado para el fondo
+  color: white; // Texto blanco
+  border: none; // Sin borde
+}
+
+// Hover (cuando el ratón pasa sobre el botón)
+button:hover,
+.btn:hover {
+  background-color: #4c1456; // Un tono más oscuro de morado
+  color: white; // Mantener el texto blanco
+}
+
+// Active (cuando el botón está presionado)
+button:active,
+.btn:active {
+  background-color: #3e0a40; // Un tono aún más oscuro para el botón presionado
+  color: white; // Mantener el texto blanco
+}
+
+// Focus (cuando el botón tiene el foco, al hacer clic o navegar con el teclado)
+button:focus,
+.btn:focus {
+  background-color: #4c1456; // Tono morado al hacer clic o navegar con teclado
+  color: white; // Mantener el texto blanco
+  outline: none; // Quitar el borde del enfoque
+}
+
+// Si quieres cambiar el color del botón mientras está activo o en enfoque
+button:focus,
+.btn:focus,
+button:active,
+.btn:active {
+  box-shadow: none; // Quitar el borde del enfoque predeterminado de Bootstrap
+}
+
+.btn-volver {
+  display: inline-block; // Para hacer que el botón se comporte como un bloque, pero solo ocupe el espacio necesario
+  background-color: none; // Color morado de fondo (puedes ajustarlo)
+  color: #4c1456; // Color blanco para el texto
+  outline: #4c1456;
+  border: #4c1456;
+  padding: 10px 10px; // Padding para que no esté pegado a los bordes (arriba y abajo, izquierda y derecha)
+  margin-top: 60px; // Márgenes para separar el botón del contenido superior e inferior
+  margin-left: 60px;
+  margin-bottom: 0;
+  border-radius: 5px; // Bordes redondeados para un toque más suave
+  text-align: center; // Centra el texto dentro del botón
+  text-decoration: none; // Asegúrate de que el enlace no tenga subrayado (si es un <a>)
+  width: auto; // Ancho del botón solo para el tamaño necesario
+
+  // Puedes agregar una sombra sutil
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+// Cuando el ratón pasa sobre el botón (hover)
+.btn-volver:hover {
+  background-color: #4c1456; // Un tono más oscuro de morado al pasar el ratón
+  cursor: pointer; // Cambia el cursor al pasar sobre el botón
+}
+
+
+h1 {
+  padding-top: 40px;
+}
+
+//menu

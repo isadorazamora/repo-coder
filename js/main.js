@@ -1,45 +1,40 @@
-console.log("JavaScript está funcionando ");
+console.log("JavaScript está funcionando");
 
 // Función para alternar el estado expandido de las imágenes
 function toggleExpand(element) {
-    element.classList.toggle('expanded');
-  }
+  element.classList.toggle('expanded');
+}
 
-  // Buscamos los elementos del HTML
+// Seleccionamos los elementos
 const openMenuButton = document.querySelector('.open-menu');
 const closeMenuButton = document.querySelector('.close-menu');
 const menu = document.querySelector('.menu');
 
-// Evento para abrir el menú
+// Mostrar el menú cuando se hace clic en el botón de apertura
 openMenuButton.addEventListener('click', () => {
-  menu.classList.add('menu-open'); // Agregamos una clase al menú
+  menu.classList.add('menu_opened'); // Mostrar el menú
 });
 
-// Evento para cerrar el menú
+// Ocultar el menú cuando se hace clic en el botón de cierre
 closeMenuButton.addEventListener('click', () => {
-  menu.classList.remove('menu-open'); // Quitamos la clase del menú
+  menu.classList.remove('menu_opened'); // Ocultar el menú
 });
 
-function mostrarCategoria(categoria) {
-  // Primero ocultamos todos los proyectos
-  const proyectos = document.querySelectorAll('.categoria-proyecto');
-  proyectos.forEach(proyecto => {
-    proyecto.style.display = 'none';
-  });
-
-  // Mostramos solo los proyectos de la categoría seleccionada
-  const proyectosCategoria = document.querySelectorAll(`.categoria-proyecto.${categoria}`);
-  proyectosCategoria.forEach(proyecto => {
-    proyecto.style.display = 'block';
-  });
+// Función para verificar el tamaño de la ventana y ajustar el menú
+function handleResize() {
+  if (window.innerWidth >= 950) {
+    // Pantalla grande: aseguramos que el menú esté visible y ocultamos el hamburguesa
+    menu.classList.remove('menu_opened');
+    openMenuButton.style.display = 'none';
+  } else {
+    // Pantalla pequeña: ocultamos el menú y mostramos el botón hamburguesa
+    openMenuButton.style.display = 'block';
+  }
 }
 
-// Cambiar el texto del botón cuando se haga click
-document.querySelectorAll('.btn').forEach(button => {
-  button.addEventListener('click', function() {
-    const target = document.querySelector(this.getAttribute('data-bs-target'));
-    if (target.classList.contains('collapse')) {
-      this.textContent = target.classList.contains('show') ? 'Ver detalles' : 'Ocultar detalles';
-    }
-  });
-});
+// Ejecutamos al cargar la página
+handleResize();
+
+// Escuchamos cambios en el tamaño de la ventana
+window.addEventListener('resize', handleResize);
+
